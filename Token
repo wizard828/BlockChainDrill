@@ -3,7 +3,7 @@ pragma solidity ^0.4.24;
 contract Token {
     // Varibale 帳本
     mapping (address => uint) public balances;
-    // uint 總供給量 = 2^256-1 所以不會overflow
+    // 理論上會寫 private
     
     // Method 發幣
     constructor (uint totlaSupply) public {
