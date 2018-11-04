@@ -1,0 +1,25 @@
+pragma solidity ^0.4.24;
+
+import "github.com/OpenZeppelin/zeppelin-solidity/contracts/math/SafeMath.sol"; 
+
+contract SafeCounter {
+    
+    using SafeMath for uint;
+    
+    uint private count = 0;
+    
+    function getCount() public view returns (uint) {
+        return count;
+    }
+    
+    function increment() public {
+        // count +=1;
+        count = count.add(1);
+    }
+    
+    function decrement() public {
+        // count -=1;
+        count = count.sub(1);
+    }
+ 
+}
